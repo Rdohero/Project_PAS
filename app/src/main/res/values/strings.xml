@@ -2,14 +2,14 @@
     <string name="app_name">Project_PAS</string>
 
     <string-array name="onboarding_title">
-        <item>Looking for item</item>
-        <item>add cart item</item>
-        <item>Make a Payment</item>
+        <item>Rasakan keberagaman rasa</item>
+        <item>Lepaskan batasan</item>
+        <item>Bagikan pengalaman Anda</item>
     </string-array>
 
     <string-array name="onboarding_description">
-        <item>You can search item you want</item>
-        <item>you can add to cart item</item>
-        <item>make payments using any card</item>
+        <item>Di Food Explorer, kami mempercayai kekuatan makanan untuk menghubungkan budaya. Bersiaplah untuk menjelajahi hidangan autentik yang mewakili warisan dan tradisi kuliner dari berbagai negara.</item>
+        <item>Pada petualangan ini, jangan ragu untuk mencoba makanan baru yang mungkin terdengar asing bagi telinga Anda.</item>
+        <item>Kami mendorong Anda untuk berbagi pengalaman kuliner Anda, bersama Food Explorer.</item>
     </string-array>
 </resources>
