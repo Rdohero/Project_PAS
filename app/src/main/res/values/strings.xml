@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Project_PAS</string>
+
+    <string-array name="onboarding_title">
+        <item>Looking for item</item>
+        <item>add cart item</item>
+        <item>Make a Payment</item>
+    </string-array>
+
+    <string-array name="onboarding_description">
+        <item>You can search item you want</item>
+        <item>you can add to cart item</item>
+        <item>make payments using any card</item>
+    </string-array>
 </resources>
