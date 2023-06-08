@@ -11,5 +11,7 @@
     <color name="merah">#B34C44</color>
     <color name="kuning">#FDDA76</color>
     <color name="semiTransparentWhite">#80FFFFFF</color>
+    <color name="red_700">#e21221</color>
+    <color name="black_80_opacity">#B3000000</color>
 
 </resources>

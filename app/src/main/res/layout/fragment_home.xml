@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".HomeActivity">
 
     <TextView
         android:id="@+id/judul"
@@ -20,7 +19,6 @@
         android:textStyle="bold"
         android:textSize="20dp"/>
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_food"
         android:layout_width="match_parent"
@@ -30,29 +28,5 @@
         tools:listitem="@layout/text_row_item"
         app:layout_constraintTop_toBottomOf="@+id/judul"
         app:layout_constraintBottom_toBottomOf="parent" />
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/menu">
-
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-    <FrameLayout
-        android:id="@+id/container_frame_layout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

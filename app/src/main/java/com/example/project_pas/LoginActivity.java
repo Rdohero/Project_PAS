@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
         preferences = new Preferences(this);
         if(preferences.getSessionLogin() == true ){
-            Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
         }
         if(getSupportActionBar()!=null){
@@ -110,9 +110,9 @@ public class LoginActivity extends AppCompatActivity {
                         toastMessage(message);
 
                         if(status == true) {
-                            goToProfileActivity();
+                            goToMainActivity();
                             preferences.setSessionLogin(true);
-                            goToProfileActivity();
+                            goToMainActivity();
                         }
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
@@ -128,8 +128,8 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void goToProfileActivity(){
-        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+    private void goToMainActivity(){
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
     }
 

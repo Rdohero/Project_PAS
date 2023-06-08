@@ -25,5 +25,6 @@ public interface ApiService {
             @Field("password") String password);
 
     @GET("get-profile")
-    Call<ResponseBody> getDetailMovie(@Query("token") String token);
+    Call<ResponseBody> getDetailFood(@Query("token") String token);
+
 }
