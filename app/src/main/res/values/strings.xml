@@ -1,15 +1,31 @@
 <resources>
-    <string name="app_name">Project_PAS</string>
+    <string name="app_name">Food Explorer</string>
 
     <string-array name="onboarding_title">
-        <item>Rasakan keberagaman rasa</item>
-        <item>Lepaskan batasan</item>
-        <item>Bagikan pengalaman Anda</item>
+        <item>Learn</item>
+        <item>Cook</item>
+        <item>Share</item>
     </string-array>
 
     <string-array name="onboarding_description">
-        <item>Di Food Explorer, kami mempercayai kekuatan makanan untuk menghubungkan budaya. Bersiaplah untuk menjelajahi hidangan autentik yang mewakili warisan dan tradisi kuliner dari berbagai negara.</item>
-        <item>Pada petualangan ini, jangan ragu untuk mencoba makanan baru yang mungkin terdengar asing bagi telinga Anda.</item>
-        <item>Kami mendorong Anda untuk berbagi pengalaman kuliner Anda, bersama Food Explorer.</item>
+        <item>Discover thousands of recipes from different cuisines around the world. </item>
+        <item>We provide detailed instructions for each recipe, from ingredient selection to specific cooking techniques.</item>
+        <item>We encourage you to share your culinary experience, with your friends.</item>
     </string-array>
+
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="error_password_dont_match">Password and confirmation password do not match</string>
+    <string name="error_minimal_password">Password must be at least 8 characters</string>
+    <string name="error_valid_email">Please enter a valid email address</string>
+    <string name="error_valid_username">Please enter a valid username</string>
+    <string name="error_field_required">All fields is required and cannot be empty</string>
+    <string name="logout">Logout</string>
 </resources>

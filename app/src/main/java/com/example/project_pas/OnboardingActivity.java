@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -25,6 +24,7 @@ public class OnboardingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         // Cek status onboarding
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean isFirstTime = sharedPreferences.getBoolean("isFirstTime", true);
@@ -32,6 +32,10 @@ public class OnboardingActivity extends AppCompatActivity {
             startMainActivity();
             return;
         }
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().hide();
+        }
+
 
         setContentView(R.layout.activity_onboarding);
 
@@ -55,7 +59,7 @@ public class OnboardingActivity extends AppCompatActivity {
     }
 
     private void startMainActivity() {
-        Intent intent = new Intent(OnboardingActivity.this, MainActivity.class);
+        Intent intent = new Intent(OnboardingActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
@@ -63,9 +67,9 @@ public class OnboardingActivity extends AppCompatActivity {
     private ArrayList<PaperOnboardingPage> getDataforOnboarding() {
         String[] onboardingTitle = getResources().getStringArray(R.array.onboarding_title);
         String[] onboardingDescription = getResources().getStringArray(R.array.onboarding_description);
-        PaperOnboardingPage source1 = new PaperOnboardingPage(onboardingTitle[0], onboardingDescription[0], Color.parseColor("#ffffff"),R.drawable.boarding_1, R.drawable.ic_search);
-        PaperOnboardingPage source2 = new PaperOnboardingPage(onboardingTitle[1], onboardingDescription[1], Color.parseColor("#ffffff"),R.drawable.boarding_2, R.drawable.ic_cart);
-        PaperOnboardingPage source3 = new PaperOnboardingPage(onboardingTitle[2], onboardingDescription[2], Color.parseColor("#ffffff"),R.drawable.boarding_3, R.drawable.ic_payment);
+        PaperOnboardingPage source1 = new PaperOnboardingPage(onboardingTitle[0], onboardingDescription[0], Color.parseColor("#F79327"),R.drawable.boarding_1, R.drawable.ic_1);
+        PaperOnboardingPage source2 = new PaperOnboardingPage(onboardingTitle[1], onboardingDescription[1], Color.parseColor("#F79327"),R.drawable.boarding_2, R.drawable.ic_2);
+        PaperOnboardingPage source3 = new PaperOnboardingPage(onboardingTitle[2], onboardingDescription[2], Color.parseColor("#F79327"),R.drawable.boarding_3, R.drawable.ic_3);
         ArrayList<PaperOnboardingPage> elements = new ArrayList<>();
 
         elements.add(source1);
