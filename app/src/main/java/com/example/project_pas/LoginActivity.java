@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Movie;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -15,7 +14,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.List;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -40,7 +38,9 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
             startActivity(intent);
         }
-
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().hide();
+        }
         binding.btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.show();
 
         /*Create handle for the RetrofitInstance interface*/
-        ApiService service = ApiClient.getRetrofitInstance().create(ApiService.class);
+        ApiService service = ApiClientLogin.getRetrofitInstance().create(ApiService.class);
         Call<ResponseBody> call = service.login(username,password);
         call.enqueue(new Callback<ResponseBody>() {
             @Override

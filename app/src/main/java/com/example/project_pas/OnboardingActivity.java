@@ -67,9 +67,9 @@ public class OnboardingActivity extends AppCompatActivity {
     private ArrayList<PaperOnboardingPage> getDataforOnboarding() {
         String[] onboardingTitle = getResources().getStringArray(R.array.onboarding_title);
         String[] onboardingDescription = getResources().getStringArray(R.array.onboarding_description);
-        PaperOnboardingPage source1 = new PaperOnboardingPage(onboardingTitle[0], onboardingDescription[0], Color.parseColor("#F79327"),R.drawable.boarding_1, R.drawable.ic_1);
-        PaperOnboardingPage source2 = new PaperOnboardingPage(onboardingTitle[1], onboardingDescription[1], Color.parseColor("#F79327"),R.drawable.boarding_2, R.drawable.ic_2);
-        PaperOnboardingPage source3 = new PaperOnboardingPage(onboardingTitle[2], onboardingDescription[2], Color.parseColor("#F79327"),R.drawable.boarding_3, R.drawable.ic_3);
+        PaperOnboardingPage source1 = new PaperOnboardingPage(onboardingTitle[0], onboardingDescription[0], Color.parseColor("#FFFFFF"),R.drawable.boarding_1, R.drawable.ic_1);
+        PaperOnboardingPage source2 = new PaperOnboardingPage(onboardingTitle[1], onboardingDescription[1], Color.parseColor("#FFFFFF"),R.drawable.boarding_2, R.drawable.ic_2);
+        PaperOnboardingPage source3 = new PaperOnboardingPage(onboardingTitle[2], onboardingDescription[2], Color.parseColor("#FFFFFF"),R.drawable.boarding_3, R.drawable.ic_3);
         ArrayList<PaperOnboardingPage> elements = new ArrayList<>();
 
         elements.add(source1);

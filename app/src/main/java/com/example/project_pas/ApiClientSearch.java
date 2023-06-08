@@ -2,9 +2,9 @@ package com.example.project_pas;
 
 import retrofit2.Retrofit;
 
-public class ApiClient {
+public class ApiClientSearch {
     public static Retrofit retrofit;
-    public static final String BASE_URL = "https://www.themealdb.com/api/json/v1/1/";
+    public static final String BASE_URL = "";
     public static Retrofit getRetrofitInstance(){
         if (retrofit == null){
             retrofit = new retrofit2.Retrofit.Builder()

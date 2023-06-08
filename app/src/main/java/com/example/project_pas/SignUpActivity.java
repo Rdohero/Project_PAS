@@ -41,7 +41,9 @@ public class SignUpActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().hide();
+        }
         binding.btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,7 +107,7 @@ public class SignUpActivity extends AppCompatActivity {
         progressDialog.show();
 
         /*Create handle for the RetrofitInstance interface*/
-        ApiService service = ApiClient.getRetrofitInstance().create(ApiService.class);
+        ApiService service = ApiClientLogin.getRetrofitInstance().create(ApiService.class);
         Call<ResponseBody> call = service.registerUser(username,fullname,email,password);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
