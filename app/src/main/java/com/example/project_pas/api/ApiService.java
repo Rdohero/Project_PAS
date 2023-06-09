@@ -1,4 +1,6 @@
-package com.example.project_pas;
+package com.example.project_pas.api;
+
+import com.example.project_pas.response.Response;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -6,6 +8,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiService {
@@ -25,6 +28,14 @@ public interface ApiService {
             @Field("password") String password);
 
     @GET("get-profile")
-    Call<ResponseBody> getDetailFood(@Query("token") String token);
+    Call<ResponseBody> getDetailMovie(@Query("token") String token);
 
+    @GET("filter.php")
+    Call<Response> getMealDb(@Query("c") String category);
+
+    @GET("lookup.php")
+    Call<Response> getMealDetail(@Query("i") String mealId);
+
+    @GET("search.php")
+    Call<Response> getSearchMakanan(@Query("s")String s);
 }

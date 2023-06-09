@@ -17,7 +17,7 @@
         android:paddingTop="16dp">
 
         <ImageView
-            android:id="@+id/movie_poster"
+            android:id="@+id/Meal_image"
             android:layout_width="match_parent"
             android:layout_height="235dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_rating"
-            app:layout_constraintTop_toTopOf="@id/movie_poster"
+            app:layout_constraintTop_toTopOf="@id/Meal_image"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="6dp"
             android:layout_marginStart="6dp"
@@ -60,16 +60,17 @@
             android:layout_height="wrap_content"
             android:background="@color/black_80_opacity"
             android:padding="6dp"
-            app:layout_constraintBottom_toBottomOf="@id/movie_poster"
-            app:layout_constraintStart_toStartOf="@id/movie_poster"
-            app:layout_constraintEnd_toEndOf="@id/movie_poster">
+            app:layout_constraintBottom_toBottomOf="@id/Meal_image"
+            app:layout_constraintStart_toStartOf="@id/Meal_image"
+            app:layout_constraintEnd_toEndOf="@id/Meal_image">
 
             <TextView
-                android:id="@+id/movie_name"
+                android:id="@+id/Meal_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="2"
                 android:minLines="2"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"

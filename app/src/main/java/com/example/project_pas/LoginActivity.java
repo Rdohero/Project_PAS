@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.project_pas.api.ApiClientLogin;
+import com.example.project_pas.api.ApiService;
 import com.example.project_pas.databinding.ActivityLoginBinding;
 
 import org.json.JSONException;
@@ -35,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
 
         preferences = new Preferences(this);
         if(preferences.getSessionLogin() == true ){
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
             startActivity(intent);
         }
         if(getSupportActionBar()!=null){
@@ -110,9 +112,9 @@ public class LoginActivity extends AppCompatActivity {
                         toastMessage(message);
 
                         if(status == true) {
-                            goToMainActivity();
+                            goToHomeActivity();
                             preferences.setSessionLogin(true);
-                            goToMainActivity();
+                            goToHomeActivity();
                         }
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
@@ -128,8 +130,8 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void goToMainActivity(){
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+    private void goToHomeActivity(){
+        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
         startActivity(intent);
     }
 

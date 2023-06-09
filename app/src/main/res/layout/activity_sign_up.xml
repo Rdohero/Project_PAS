@@ -41,7 +41,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo">
@@ -123,22 +123,45 @@
                 />
 
 
-
-            <Button
-                android:id="@+id/btn_signup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="@color/kuning"
-                android:paddingVertical="12dp"
-                android:text="@string/sign_up"
-                android:textColor="@color/merah"
-                app:cornerRadius="10dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/kuning"
+        android:paddingVertical="12dp"
+        android:text="@string/sign_up"
+        android:textColor="@color/merah"
+        app:cornerRadius="10dp"
+        android:layout_marginEnd="500px"
+        android:layout_marginStart="80px"
+        app:layout_constraintTop_toBottomOf="@id/card_view"/>
 
+    <ImageView
+        android:id="@+id/google"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:elevation="100px"
+        app:layout_constraintStart_toEndOf="@+id/btn_signup"
+        android:paddingLeft="10px"
+        app:layout_constraintTop_toBottomOf="@id/card_view"
+        app:srcCompat="@drawable/google"
+        tools:ignore="MissingConstraints"
+        android:layout_margin="20dp"/>
 
-
+    <ImageView
+        android:id="@+id/facebook"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:elevation="100px"
+        app:layout_constraintStart_toEndOf="@+id/google"
+        android:paddingLeft="10px"
+        app:layout_constraintTop_toBottomOf="@id/card_view"
+        app:srcCompat="@drawable/facebook"
+        tools:ignore="MissingConstraints"
+        android:layout_margin="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
